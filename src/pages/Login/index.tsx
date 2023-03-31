@@ -1,7 +1,27 @@
+import { ChangeEvent, FormEvent, useState } from "react";
+
 export default function Login() {
+  const [userEmail, setUserEmail] = useState("");
+  const [userPassword, setUserPassword] = useState("");
+
+  function handleGetUserEmail(event: ChangeEvent<HTMLInputElement>) {
+    setUserEmail(event.currentTarget.value);
+  }
+
+  function handleGetUserPassword(event: ChangeEvent<HTMLInputElement>) {
+    setUserPassword(event.currentTarget.value);
+  }
+
+  function handleUserLogin(event: FormEvent) {
+    event.preventDefault();
+  }
+
   return (
     <div className="flex w-screen h-screen flex-1 items-center justify-center">
-      <form className="border-2 p-5 w-96 h-auto rounded-lg">
+      <form
+        onSubmit={handleUserLogin}
+        className="border-2 p-5 w-96 h-auto rounded-lg"
+      >
         <div className="mb-4 flex">
           <label className="m-auto text-slate-500 justify-center items-center">
             Please fill your detail to access your account.
@@ -11,6 +31,7 @@ export default function Login() {
         <div>
           <label className="flex justify-start text-sm">Email</label>
           <input
+            onChange={handleGetUserEmail}
             type="text"
             className="block m-auto border-2 items-center p-1 mt-1 rounded-lg w-full"
           />
@@ -18,6 +39,7 @@ export default function Login() {
         <div className="mt-5">
           <label className="flex justify-start text-sm">Password</label>
           <input
+            onChange={handleGetUserPassword}
             type="text"
             className="block m-auto border-2 items-center p-1 mt-1 rounded-lg w-full focus:ring-sky-500"
           />
@@ -48,15 +70,11 @@ export default function Login() {
           </button>
         </div>
         <div className="flex mt-3 justify-center">
-          <button
-            type="submit"
-            className="rounded-lg bg-white border-2 text-black w-60 p-1"
-          >
+          <button className="rounded-lg bg-white border-2 text-black w-60 p-1">
             <svg
-              className="inline-block mr-2"
               width="24"
               height="24"
-              viewBox="0 0 24"
+              viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -83,7 +101,7 @@ export default function Login() {
 
         <div className="flex justify-center mt-4 ml-2">
           <label className="text-sm">
-            Don't have an account?{" "}
+            Dont have an account?{" "}
             <a
               href="#"
               className="underline font-medium text-purple-300 text-sm"
