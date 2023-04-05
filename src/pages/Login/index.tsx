@@ -12,8 +12,18 @@ export default function Login() {
     setUserPassword(event.currentTarget.value);
   }
 
-  function handleUserLogin(event: FormEvent) {
+  async function handleUserLogin(event: FormEvent) {
     event.preventDefault();
+
+    // Send data to backend
+
+    /* TODO: Check api route and params */
+    // const response = await axiosInstance.post("/user", {
+    //   userEmail,
+    //   userPassword,
+    // });
+
+    // console.log(response.data);
   }
 
   return (
@@ -77,6 +87,7 @@ export default function Login() {
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="inline mr-2"
             >
               <path
                 d="M22.501 12.2332C22.501 11.3699 22.4296 10.7399 22.2748 10.0865H12.2153V13.9832H18.12C18.001 14.9515 17.3582 16.4099 15.9296 17.3898L15.9096 17.5203L19.0902 19.935L19.3106 19.9565C21.3343 18.1249 22.501 15.4298 22.501 12.2332Z"
