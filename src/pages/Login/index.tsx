@@ -42,6 +42,7 @@ export default function Login() {
           <label className="flex justify-start text-sm">Email</label>
           <input
             onChange={handleGetUserEmail}
+            value={userEmail}
             type="text"
             className="block m-auto border-2 items-center p-1 mt-1 rounded-lg w-full"
           />
@@ -50,6 +51,7 @@ export default function Login() {
           <label className="flex justify-start text-sm">Password</label>
           <input
             onChange={handleGetUserPassword}
+            value={userPassword}
             type="text"
             className="block m-auto border-2 items-center p-1 mt-1 rounded-lg w-full focus:ring-sky-500"
           />
