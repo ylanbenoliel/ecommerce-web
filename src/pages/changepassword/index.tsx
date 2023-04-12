@@ -29,6 +29,11 @@ export default function ChangePassword() {
         onSubmit={handleChangeUserPassword}
         className="border-2 p-5 w-96 h-auto rounded-lg"
       >
+        <div className="mb-4 flex">
+          <label className="m-auto text-slate-500 justify-center items-center">
+            Please fill the fields to change your password.
+          </label>
+        </div>
         <div>
           <label className="flex justify-start text-sm">New password</label>
           <input
