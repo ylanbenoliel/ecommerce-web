@@ -119,7 +119,7 @@ export default function Login() {
               href="#"
               className="underline font-medium text-purple-300 text-sm"
             >
-              Sing up
+              Sign up
             </a>
           </label>
         </div>
