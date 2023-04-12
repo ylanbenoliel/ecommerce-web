@@ -6,11 +6,11 @@ export default function Login() {
   const [userPassword, setUserPassword] = useState("");
 
   function handleGetUserEmail(event: ChangeEvent<HTMLInputElement>) {
-    setUserEmail(event.currentTarget.value);
+    setUserEmail(event.target.value);
   }
 
   function handleGetUserPassword(event: ChangeEvent<HTMLInputElement>) {
-    setUserPassword(event.currentTarget.value);
+    setUserPassword(event.target.value);
   }
 
   async function handleUserLogin(event: FormEvent) {
