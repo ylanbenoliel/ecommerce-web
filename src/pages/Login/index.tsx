@@ -93,7 +93,7 @@ export default function Login() {
           <label className="text-sm">
             Don&apos;t have an account?{" "}
             <a
-              href="#"
+              href="../signup/"
               className="underline font-medium text-purple-300 text-sm"
             >
               Sign up
