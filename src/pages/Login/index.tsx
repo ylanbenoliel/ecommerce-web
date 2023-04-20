@@ -25,6 +25,9 @@ export default function Login() {
     // });
 
     // console.log(response.data);
+
+    setUserEmail("");
+    setUserPassword("");
   }
 
   return (
