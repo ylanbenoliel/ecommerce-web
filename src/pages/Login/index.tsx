@@ -69,7 +69,7 @@ export default function Login() {
 
           <div className="flex">
             <a
-              href="../changepassword"
+              href="../forgotpassword"
               className="mr-2 underline font-medium text-purple-300 text-sm"
             >
               Forgot password?
