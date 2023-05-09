@@ -1,11 +1,9 @@
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import NavBar from "@/components/navbar";
 
 export default function Home() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <div className="flex m-auto w-auto h-24 items-center border-2 ">
+      <NavBar />
+    </div>
   );
 }
